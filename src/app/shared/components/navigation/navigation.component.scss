@@ -1,0 +1,19 @@
+@import '../../../../variables.scss';
+.nav-title{
+
+    font-size:$font-size-lg;
+    color: $color-fg;
+}
+
+.navigation{
+    background-color: $color-bg;
+    padding: 20px 15px;
+    display: flex;
+
+}
+
+.item{
+    display: flex;
+    color: $color-white;
+    
+}
