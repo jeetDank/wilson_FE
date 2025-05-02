@@ -1,24 +1,15 @@
 <div class="navigation">
+  <div class="nav-title">Wilson Innovators</div>
 
-    <div class="nav-title">
-     Wilson Innovators
+  <div class="nav-items d-flex gap-3 me-4 ms-4">
+    <div *ngFor="let nav of navLinks" class="d-flex align-items-center">
+      <span class="item d-flex align-items-center gap-2">
+        <span class="nav-icon d-flex align-items-center justify-content-center" style="height: 20px; width: 20px;">
+          <img [src]="nav.logo" alt="icon" style="height: 100%; width: 100%;" />
+        </span>
+        {{ nav.link }}
+      </span>
     </div>
-
-    <div class="nav-items me-4 ms-4"> 
-        <div class="item" *ngFor="let nav of navLinks" >
-           <span class="nav-icon" >
-            <img style="height: 100%;width: 100%; "  [src]="nav.logo" alt="">
-           </span>
-           <span class="nav-link" >
-            {{nav.link}}
-           </span>
-
-        </div>
-        <div>
-
-        </div>
-
-    </div>
-
-
+  </div>
+  
 </div>

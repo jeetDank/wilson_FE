@@ -12,7 +12,7 @@ export class NavigationComponent {
   navLinks = [
     {
       link:'Add Target',
-      logo:'assets/profile_circle.svg',
+      logo:'assets/icons/profile-circle.svg',
       isHidden:false,
     },
   ]

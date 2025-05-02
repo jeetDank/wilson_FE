@@ -13,7 +13,15 @@
 }
 
 .item{
-    display: flex;
+  
     color: $color-white;
-    
+    cursor: pointer;
+ 
+
 }
+
+.item:hover,:active{
+    color: $color-fg;
+}
+
+
