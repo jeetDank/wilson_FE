@@ -1,10 +1,18 @@
-<form [formGroup]="addTargetForm" >
-
-    <div class="page-title" >
-        Add Target Company
+<div>
+    <div class="page-title pb-3 pt-3 ps-3 wl-bg-primary" >
+        Add Company
     </div>
-    
+    <form class=" row p-3" [formGroup]="addTargetForm">
+       <div class="col-sm-12 mb-3 w-100">
+        <label  class="mb-2 mt-2" for="">Company Name</label> 
+        <input class="form-control mb-2 mt-2" type="text">
+       </div>
+       <div class="col-sm-12" >
+        <button class="btn btn-primary-color" >Submit</button>
+       </div>
+       
 
+        
 
-
-</form>
+    </form>
+</div>

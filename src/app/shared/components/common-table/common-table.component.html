@@ -1,0 +1,26 @@
+<table class="table table-bordered" > 
+
+
+    <tr>
+        <th *ngFor="let header of headers">
+            {{header}}
+        </th>
+        <th class="text-center" *ngIf="headers.length ==0" >
+            No Data To Show
+        </th>
+    </tr>
+    <tr *ngFor="let row of displayData">
+        <td  *ngFor="let column of row"> 
+
+            {{column}}
+
+        </td>
+        <div *ngIf="data.length == 0" >
+            There is no data to be shown.
+        </div>
+    </tr>
+
+
+</table>
+
+<ngb-pagination [collectionSize]="totalPages" [(page)]="page" aria-label="Default pagination" />

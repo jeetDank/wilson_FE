@@ -35,3 +35,33 @@ html, body {
   ::placeholder{
     font-size: $font-size-sm;
   }
+
+  .btn-primary-color{
+    background-color: $color-bg;
+    color: white;
+    
+  }
+
+  .btn-primary-color:hover 
+  {
+    border: 1px solid $color-bg;
+  }
+
+
+
+
+  .page-title{
+    font-size: $font-size-lg;
+    font-weight: $font-weight-bold;
+    margin-bottom: $spacing-md;
+  }
+
+  .page-sub-title{
+    font-size: $font-size-sm;
+    font-weight: $font-weight-bold;
+    margin-bottom: $spacing-md;
+  }
+
+  button{
+    font-size: $font-size-base;
+  }
