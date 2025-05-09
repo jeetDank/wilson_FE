@@ -8,9 +8,17 @@
   </div>
   <div class="page-sub-title">Company Details</div>
 
-  <div style="overflow-x:scroll ;" >
-        <app-common-table class="w-100" [data]="data" [headers]="headers" ></app-common-table>
+  <mat-tab-group>
+  <mat-tab label="Financial Attrbutes">
+  <div>
+    <app-common-mat-table [data]="data" [displayedColumns]="headers" ></app-common-mat-table>
   </div>
+ </mat-tab>
+  <mat-tab label="Second"> Content 2 </mat-tab>
+  <mat-tab label="Third"> Content 3 </mat-tab>
+</mat-tab-group>
+
+
 
 
 

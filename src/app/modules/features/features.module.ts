@@ -9,13 +9,15 @@ import {ReactiveFormsModule} from '@angular/forms'
 import { CompanyComponent } from './company/company.component';
 import { CompanyDetailsComponent } from './company/company-details/company-details.component';
 import { CommonTableComponent } from '../../shared/components/common-table/common-table.component';
+import { CommonMatTableComponent } from '../../shared/components/common-mat-table/common-mat-table.component';
+import {MatTabsModule} from '@angular/material/tabs';
 
 @NgModule({
   declarations: [
    FeatureComponent,
    AddTargetComponent,
    CompanyComponent,
-   CompanyDetailsComponent
+   CompanyDetailsComponent,
     
   ],
   imports: [
@@ -24,7 +26,9 @@ import { CommonTableComponent } from '../../shared/components/common-table/commo
     FeaturesRoutingModule,
     RouterModule,
     NavigationComponent,
-    CommonTableComponent
+    CommonTableComponent,
+    CommonMatTableComponent,
+    MatTabsModule
 
     
   ]

@@ -20,7 +20,7 @@ export class CompanyDetailsComponent implements OnInit{
 
   fetchFinancialAttribs(cik:any){
     this.main.getfinancialAttributes(cik).subscribe((res)=>{
-     if(res.data){
+     if(res.data && res.data.length > 0){
       console.log(res.data);
       
       this.headers = Object.keys(res.data[0]);
