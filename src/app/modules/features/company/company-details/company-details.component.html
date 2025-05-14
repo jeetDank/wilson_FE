@@ -1,29 +1,56 @@
 <div class="">
-  <div class="page-title">Company Details</div>
   <div class="row align-items-center mb-2">
-    <div class="col-sm-6">bread / crumbs / will / be / here</div>
+    <div class="col-sm-6"><div class="page-title">Company Details</div></div>
     <div class="col-sm-6">
-      <button class="btn btn-primary-color float-end" routerLink="/features/company" >Back</button>
+      <button
+        class="btn btn-primary-color float-end"
+        routerLink="/features/company"
+      >
+        Back
+      </button>
     </div>
   </div>
-  <div class="page-sub-title">Company Details</div>
+  <div class="page-sub-title">{{ companyDetails.company_name }}</div>
 
   <mat-tab-group>
-  <mat-tab label="Financial Attrbutes">
-  <div>
-    <app-common-mat-table [data]="data" [displayedColumns]="headers" ></app-common-mat-table>
-  </div>
- </mat-tab>
-  <mat-tab label="Second"> Content 2 </mat-tab>
-  <mat-tab label="Third"> Content 3 </mat-tab>
-</mat-tab-group>
+    <mat-tab label="Data Pointers">
+      <div>
+        <div class="mt-4 mb-4">
+          <span class="page-sub-title ms-2"> Period Covered: </span>
+          <span class="fw-medium"> {{ companyDetails.min }} </span>
+          to
+          <span class="fw-medium">
+            {{ companyDetails.max }}
+          </span>
 
+          <span class="page-sub-title ms-4"> Data Points: </span>
+          <span class="fw-medium"> {{ companyDetails.total_records }} </span>
 
+          <span class="page-sub-title ms-4"> Total Attributes: </span>
+          <span class="fw-medium">
+            {{ companyDetails.unique_attrib_count }}
+          </span>
+        </div>
 
-
-
-
-
-
-  
+        <mat-tab-group>
+          <mat-tab label="Company Facts">
+            <div>
+              <app-common-mat-table
+                [data]="data"
+                [displayedColumns]="headers"
+              ></app-common-mat-table>
+            </div>
+          </mat-tab>
+          <mat-tab label="Operational Attributes"> </mat-tab>
+          <mat-tab label="Market Attributes"> </mat-tab>
+          <mat-tab label="Strategic Fit"> </mat-tab>
+          <mat-tab label="Risk & Exposure"> </mat-tab>
+        </mat-tab-group>
+      </div>
+    </mat-tab>
+    <mat-tab label="Score"> </mat-tab>
+    <mat-tab label="L1 Report"> </mat-tab>
+    <mat-tab label="L2 Report"> </mat-tab>
+    <mat-tab label="L3 Report"> </mat-tab>
+  </mat-tab-group>
 </div>

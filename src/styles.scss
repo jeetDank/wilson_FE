@@ -1,12 +1,29 @@
 /* You can add global styles to this file, and also import other style files */
 
+
+
+@use '@angular/material' as mat;
+
+// Customize the entire app. Change :root to your selector if you want to scope the styles.
+:root {
+  @include mat.table-overrides((
+    row-item-container-height:30px,
+    header-container-height:30px
+  ));
+
+   @include mat.tabs-overrides((
+    active-indicator-color: #284B4B,
+    divider-color: #ffffff,
+    container-height:30px,
+    active-hover-indicator-color:#7DF9FF
+  ));
+}
 @font-face {
     font-family: 'wilson-helvetica';
     src: url('assets/fonts/Helvetica.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
   }
-
 
 
 
@@ -52,13 +69,13 @@ html, body {
 
   .page-title{
     font-size: $font-size-lg;
-    font-weight: $font-weight-bold;
+    // font-weight: $font-weight-bold;
     margin-bottom: $spacing-md;
   }
 
   .page-sub-title{
-    font-size: $font-size-sm;
-    font-weight: $font-weight-bold;
+    font-size: $font-size-base;
+    // font-weight: $font-weight-bold;
     margin-bottom: $spacing-md;
   }
 
@@ -67,3 +84,6 @@ html, body {
   }
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+

@@ -3,13 +3,13 @@
 
   <div class="nav-items d-flex gap-3 me-4 ms-4">
     <div *ngFor="let nav of navLinks" class="d-flex align-items-center">
-      <span class="item d-flex align-items-center gap-2">
+      <span class="item d-flex align-items-center gap-2" [routerLinkActive]="'active-link'" [routerLink]="nav.link" >
         <span class="nav-icon d-flex align-items-center justify-content-center" style="height: 20px; width: 20px;">
          <div style="width: 30px;">
            <mat-icon aria-hidden="false" aria-label="Example home icon" [fontIcon]="nav.logo"></mat-icon>
          </div>
         </span>
-        {{ nav.link }}
+        {{ nav.name }}
       </span>
     </div>
   </div>

@@ -33,7 +33,11 @@ export class CompanyComponent implements OnInit{
         this.companies = res.data.map((record:any)=>{
           return {
             name:record.name,
-            factAvailable:record.view ==1 ? true:false
+            factAvailable:record.view ==1 ? true:false,
+            sic_description:record.sic_description,
+            entity_type:record.entity_type,
+            updated_at:record.updated_at,
+            cik:record.cik
           }
         })
       }

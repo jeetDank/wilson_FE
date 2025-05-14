@@ -1,8 +1,7 @@
 <div class="">
   <div class="page-title">Company</div>
   <div class="row align-items-center mb-2">
-    <div class="col-sm-6">bread / crumbs / will / be / here</div>
-    <div class="col-sm-6">
+    <div class="col-sm-12">
       <button class="btn btn-primary-color float-end" (click)="openModal()">
         Add Company
       </button>
@@ -10,15 +9,49 @@
   </div>
 
   <div class="row">
-    <div class="col-sm-12 col-lg-3">
-      <div class="card" *ngFor="let company of companies" >
-        <div class="card-header">{{company.name}}</div>
-        <div class="card-body">
-          <div>
-            <button routerLink="/features/company/company-details" [disabled]="!company.factAvailable" class="btn btn-primary-color">
-              View
-            </button>
+    <div class="col-sm-12 col-lg-3 " *ngFor="let company of companies">
+      <div class="card mb-4" >
+        <div
+          class="card-header d-flex align-content-between align-items-center"
+        >
+          <div class="me-auto">
+            {{ company.name }}
           </div>
+          <button
+            routerLink="/features/company/company-details"
+            [disabled]="!company.factAvailable"
+            class="btn btn-primary-color"
+          >
+            View
+          </button>
+        </div>
+        <div class="card-body">
+          <div class="mb-2 border-bottom">
+            <div class="card-list-key">CIK</div>
+            <div class="mb-2">
+              {{ company.cik }}
+            </div>
+          </div>
+          <div class="mb-2 border-bottom">
+            <div class="card-list-key">Entity Type</div>
+            <div class="mb-2">
+              {{ company.entity_type }}
+            </div>
+          </div>
+          <div class="mb-2 border-bottom">
+            <div class="card-list-key">SIC Description</div>
+            <div class="mb-2">
+              {{ company.sic_description }}
+            </div>
+          </div>
+          <div class="border-bottom">
+            <div class="card-list-key">Updated At:</div>
+            <div class="mb-2">
+              {{ company.updated_at | date : "yyyy-MM-dd hh:mm" }}
+            </div>
+          </div>
+
+          <div></div>
         </div>
       </div>
     </div>
