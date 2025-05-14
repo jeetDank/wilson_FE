@@ -1,7 +1,9 @@
 <div class="">
-  <div class="page-title">Company</div>
+  
   <div class="row align-items-center mb-2">
-    <div class="col-sm-12">
+    <div class="col-sm-6 page-title">Company</div>
+    <div class="col-sm-6">
+      
       <button class="btn btn-primary-color float-end" (click)="openModal()">
         Add Company
       </button>
@@ -17,7 +19,8 @@
           <div class="me-auto">
             {{ company.name }}
           </div>
-          <button
+          <button 
+            (click)="setCIK(company.cik)"
             routerLink="/features/company/company-details"
             [disabled]="!company.factAvailable"
             class="btn btn-primary-color"

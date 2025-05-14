@@ -5,14 +5,26 @@
     <form class=" row p-3" [formGroup]="addTargetForm">
        <div class="col-sm-12 mb-3 w-100">
         <label  class="mb-2 mt-2" for="">Company Name</label> 
-        <input class="form-control mb-2 mt-2" type="text">
+        <input formControlName="companyName" class="form-control mb-2 mt-2" type="text">
        </div>
        <div class="col-sm-12" >
-        <button class="btn btn-primary-color" >Submit</button>
+        <button class="btn btn-primary-color" role="button" (click)="createNewTarget()" >Submit</button>
+        <button class="btn btn-primary-color ms-2" role="button" (click)="close()" >Close</button>
        </div>
+
+
        
 
-        
+        <div class="mt-2">
+        <span class="text-danger" >
+            {{this.inlineNotifications.api_failure}}
+        </span>
+        <span class="text-success" >
+            {{this.inlineNotifications.api_success}}
+        </span>
+    </div>
 
     </form>
+
+    
 </div>

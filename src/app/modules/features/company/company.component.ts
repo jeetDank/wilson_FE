@@ -16,11 +16,13 @@ export class CompanyComponent implements OnInit{
 
   private modalService = inject(NgbModal);
   companies:any = [];
-  constructor(private main:MainServiceService){
+  constructor(private main:MainServiceService,private router:Router){
 
   }
   openModal(){
-    this.modalService.open(AddTargetComponent)
+    this.modalService.open(AddTargetComponent).dismissed.subscribe(()=>{
+      this.fetchCompanies();
+    })
   }
 
   ngOnInit(): void {
@@ -32,6 +34,7 @@ export class CompanyComponent implements OnInit{
       if(res.data){
         this.companies = res.data.map((record:any)=>{
           return {
+            
             name:record.name,
             factAvailable:record.view ==1 ? true:false,
             sic_description:record.sic_description,
@@ -44,6 +47,11 @@ export class CompanyComponent implements OnInit{
       
       
     })
+  }
+
+  setCIK(cik:string){
+    this.main.setCIKForConsumption(cik);
+    this.router.navigate(['/features/company/company-details'])
   }
 
 

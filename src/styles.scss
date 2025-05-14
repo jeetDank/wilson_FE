@@ -15,7 +15,9 @@
     active-indicator-color: #284B4B,
     divider-color: #ffffff,
     container-height:30px,
-    active-hover-indicator-color:#7DF9FF
+    active-hover-indicator-color:#7DF9FF,
+    
+    
   ));
 }
 @font-face {
@@ -54,8 +56,8 @@ html, body {
   }
 
   .btn-primary-color{
-    background-color: $color-bg;
-    color: white;
+    
+    border:1px solid #284B4B;
     
   }
 
@@ -86,4 +88,11 @@ html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 
+button:disabled{
+  text-decoration: line-through;
+}
 
+
+button:hover{
+  border:  1px solid $color-fg ;
+}

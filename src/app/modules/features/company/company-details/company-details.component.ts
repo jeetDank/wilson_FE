@@ -56,7 +56,17 @@ export class CompanyDetailsComponent implements OnInit{
   }
 
   ngOnInit(): void {
-    this.fetchFinancialAttribs({cik:"0000720005"})
+
+    this.main.company_cik_number$.subscribe({
+      next:(res)=>{
+        if(res){
+          console.log('das',res);
+          this.fetchFinancialAttribs(res)
+        }
+        
+      }
+    })
+    
   }
 
 
